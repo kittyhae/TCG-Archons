@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+  }
+
+  .container {
+    width: 350px;
+    height: 600px;
+    perspective: 800px;
+  }
+  
+  .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 1.3rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .back{
+    transform: rotateY(180deg);
+  }
+
+  .front1 {
+    background-image: url(assets/anemo.jpg);
+    background-size: contain;
+  }
+  
+  .back1 {
+    background-image: url(assets/venti.jpg);
+    background-size: 110% auto;
+    background-position: center center;
+  }
+
+  .front2 {
+    background-image: url(assets/geo.jpg);
+    background-size: contain;
+  }
+  
+  .back2 {
+    background-image: url(assets/zhongli.jpg);
+    background-size: 110% auto;
+    background-position: center center;
+  }
+
+  .front3 {
+    background-image: url(assets/electro.jpg);
+    background-size: contain;
+  }
+  
+  .back3 {
+    background-image: url(assets/raiden.jpg);
+    background-size: 110% auto;
+    background-position: center center;
+  }
+  
+  .front4 {
+    background-image: url(assets/dendro.jpg);
+    background-size: contain;
+  }
+  
+  .back4 {
+    background-image: url(assets/nahida.jpg);
+    background-size: 110% auto;
+    background-position: center center;
+  }
